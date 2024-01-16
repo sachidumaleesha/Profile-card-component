@@ -3,33 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Profile card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  Victor Crest
-  26
-  London
+<body class="bg-[#19a2ae] relative h-screen overflow-hidden">
 
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <!-- Background Images -->
+  <div class="relative h-screen z-0">
+    <img src="./images/bg-pattern-top.svg" alt="bg-pattern-top" class="absolute top-[-400px] left-[-50px]">
+    <img src="/images/bg-pattern-bottom.svg" alt="bg-pattern-bottom" class="absolute right-[-100px] bottom-[-400px] ">
+  </div>
+  
+  <!-- Content -->
+  <div class="absolute z-10 top-0 flex justify-center w-full h-full items-center">
+    <div class="bg-white max-w-[400px] w-full rounded-2xl flex flex-col gap-5 justify-center items-center pb-8 w-full">
+      <div class="w-full relative">
+        <img src="./images/bg-pattern-card.svg" alt="bg-pattern-bottom" class="w-full rounded-t-2xl">
+        <img src="./images/image-victor.jpg" alt="image-victor" class="rounded-full border-white border-4 absolute top-[100px] left-[50%] translate-x-[-50%]">
+      </div>
+      <div class="flex flex-col justify-center items-center pt-10">
+        <h1 class="text-2xl font-semibold">Victor Crest <span class="text-gray-500">26</span></h1>
+        <p class="text-gray-500">London</p>
+      </div>
+      <div class="w-full">
+        <hr>
+      </div>
+      <div class="flex justify-between w-full px-10">
+        <div class="flex flex-col justify-between items-center">
+          <p class="text-xl font-semibold">80K</p>
+          <p class="text-sm font-thin">Followers</p>
+        </div>
+        <div class="flex flex-col justify-between items-center">
+          <p class="text-xl font-semibold">803K</p>
+          <p class="text-sm font-thin">LIKES</p>
+          </div>
+        <div class="flex flex-col justify-between items-center">
+          <p class="text-xl font-semibold">1.4K</p>
+          <p class="text-sm font-thin">Photos</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
